@@ -1,91 +1,64 @@
 function setup() {
-
-  // create the canvas
-
   canvas = createCanvas(600, 600);
-
-  // attach the canvas to the div in your HTML
-
   canvas.parent("sketch-container");
 }
 
 function draw() {
   background(102, 102, 255);
-  scale(0.5);
-  
+
+  // --- 左侧大矩形 ---
   push();
-  translate(300,300)
-  rotate(90);
+  translate(300, 300);
+  rotate(PI / 2); // 原本 rotate(90)
   fill(255, 153, 255);
-  stroke(153, 0, 204);
   noStroke();
-  rect(200,0,300,700);
+  rect(-150, -350, 300, 700); // 调整到画布内
   pop();
-  
-  fill(255, 255, 255)
+
+  // --- 白色横条 ---
   noStroke();
-  rect(30,350,1300,30);
-  rect(600,500,20,300);
-  rect(500,500,20,300);
-  rect(400,500,20,300);
-  rect(300,500,20,300);
-  rect(200,500,20,300);
-  rect(100,500,20,300);
-  rect(0,500,20,300);
-  
-  noStroke();
+  fill(255);
+  rect(30, 350, 540, 30); // 缩到画布内
+
+  // --- 白色竖线 ---
+  let xPositions = [550, 500, 450, 400, 350, 300, 250];
+  for (let x of xPositions) {
+    rect(x - 10, 500, 20, 100); // 高度从 300 → 100
+  }
+
+  // --- 树干 ---
   fill(120, 70, 20);
   rect(150, 165, 50, 130);
-  
-  push();
-  translate(115,150);
-  rotate(-45);
-  fill(20, 150, 70);
-  ellipse(0, 0, 70, 25);
-  pop();
-  
-  push();
-  translate(115,150);
-  rotate(45);
-  fill(20, 150, 70);
-  ellipse(0, 0, 70, 25);
-  pop();
-  
-  push();
-  translate(200,130);
-  rotate(-45);
-  fill(20, 150, 70);
-  ellipse(0, 0, 60, 20);
-  pop();
-  
-  push();
-  translate(200,130);
-  rotate(45);
-  fill(20, 150, 70);
-  ellipse(0, 0, 60, 20);
-  pop();
-  
+
+  // --- 树叶 ---
+  drawLeaf(115, 150, -45, 70, 25);
+  drawLeaf(115, 150, 45, 70, 25);
+  drawLeaf(200, 130, -45, 60, 20);
+  drawLeaf(200, 130, 45, 60, 20);
+
+  // --- 蓝色倒三角两个 ---
   push();
   blendMode(BURN);
   fill(180, 220, 250, 120);
   stroke(1, 0, 200);
   strokeWeight(3);
-  quad(100, 100,
-       250, 100,
-       195, 230,
-       45, 230);
-  quad(350, 100,
-       500, 100,
-       445, 230,
-       295, 230);
+
+  quad(100, 100, 250, 100, 195, 230, 45, 230);
+  quad(350, 100, 500, 100, 445, 230, 295, 230);
+
   pop();
   blendMode(BLEND);
-  
-  //show coordinates with mouse
-  push();
+
+  // show mouse coord
   fill(0);
   text("(" + mouseX + ", " + mouseY + ")", mouseX, mouseY);
-  stroke(0);
-  pop();
+}
 
+function drawLeaf(x, y, angle, w, h) {
+  push();
+  translate(x, y);
+  rotate(radians(angle));
+  fill(20, 150, 70);
+  ellipse(0, 0, w, h);
+  pop();
 }
