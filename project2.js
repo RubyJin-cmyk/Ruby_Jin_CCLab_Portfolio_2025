@@ -1,32 +1,16 @@
-const R = 150;
-const xh = angle => R / 15.0 * 16 * Math.pow(Math.sin(angle), 3);
-const yh = p => R / 15.0 * (
--13 * Math.cos(p) +
-5 * Math.cos(2 * p) +
-2 * Math.cos(3 * p) +
-Math.cos(4 * p)
-);
-
+let faceWidth, faceHeight, eyeSize, mouthWidth, mouthHeight;
+let r, g, b;
 
 function setup() {
-
-  // create the canvas
-
-  canvas = createCanvas(400, 400);
-
-  // attach the canvas to the div in your HTML
-
-  canvas.parent("sketch-container");
-  
-let faceWidth, faceHeight, eyeSize, mouthWidth, mouthHeight;
-let x;
-let r;
-let g;
-let b;
-  
+  let canvas = createCanvas(400, 400);
+  canvas.parent("sketch-container");  // 关键：挂载到 div
   frameRate(60);
+  
+  r = 200; g = 200; b = 255;  // 初始化背景
+  randomizeFace();             // 初始化面部
+}
 
-  function draw() {
+function draw() {
   background(r, g, b);
   faceHeight = mouseX / 1.8 + 20;
   faceWidth = mouseY / 1.8 + 20;
@@ -35,13 +19,11 @@ let b;
   fill(255, 215, 179);
   ellipse(width/2, height/2, faceWidth, faceHeight);
 
-  //eyes
   fill(0);
-  ellipse(width/2 - faceWidth/4, height/2 - 30, eyeSize);
-  ellipse(width/2 + faceWidth/4, height/2 - 30, eyeSize);
-  
+  ellipse(width/2 - faceWidth/4, height/2 - 30, eyeSize, eyeSize);
+  ellipse(width/2 + faceWidth/4, height/2 - 30, eyeSize, eyeSize);
 
- fill(0);
+  fill(0);
   rectMode(CENTER);
   rect(width/2, height/2 + 50, mouthWidth, mouthHeight, 20);
 }
@@ -62,5 +44,4 @@ function mousePressed(){
   r = random(0,225);
   g = random(0,225);
   b = random(0,225);
-  background(r,g,b);
 }
