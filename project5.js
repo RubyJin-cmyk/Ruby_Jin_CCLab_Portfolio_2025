@@ -1,13 +1,13 @@
 const R = 150;
 const xh = angle => R / 15.0 * 16 * Math.pow(Math.sin(angle), 3);
 const yh = p => R / 15.0 * (
--13 * Math.cos(p) +
-5 * Math.cos(2 * p) +
-2 * Math.cos(3 * p) +
-Math.cos(4 * p)
+  -13 * Math.cos(p) +
+  5 * Math.cos(2 * p) +
+  2 * Math.cos(3 * p) +
+  Math.cos(4 * p)
 );
 
-  let points = [
+let points = [
   [260, 100],
   [315, 100],
   [465, 350],
@@ -30,13 +30,14 @@ let numStars = 300;
 let angleOffset = 0;
 
 function setup() {
-  let canvas = createCanvas(600, 600);
+  // create the canvas
+  let canvas = createCanvas(400, 400);
+
+  // attach the canvas to the div in your HTML
   canvas.parent("sketch-container");
   
   noStroke();
-}
   
-
   // 初始化星星
   for (let i = 0; i < numStars; i++) {
     stars.push({
