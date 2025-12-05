@@ -13,7 +13,6 @@ function setup() {
   // create the canvas
 
   canvas = createCanvas(400, 400);
-  frameRate(60);
 
   // attach the canvas to the div in your HTML
 
@@ -24,6 +23,8 @@ let x;
 let r;
 let g;
 let b;
+  
+  frameRate(60);
 
   function draw() {
   background(r, g, b);
