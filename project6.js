@@ -1,10 +1,10 @@
 const R = 150;
 const xh = angle => R / 15.0 * 16 * Math.pow(Math.sin(angle), 3);
 const yh = p => R / 15.0 * (
--13 * Math.cos(p) +
-5 * Math.cos(2 * p) +
-2 * Math.cos(3 * p) +
-Math.cos(4 * p)
+  -13 * Math.cos(p) +
+  5 * Math.cos(2 * p) +
+  2 * Math.cos(3 * p) +
+  Math.cos(4 * p)
 );
 
 let sleepHours = [10, 1.5, 6.08, 0.28, 6.67, 19.5, 8.75, 12.33, 9];
@@ -12,16 +12,19 @@ let drops = [];
 let ripples = [];
 
 function setup() {
+  // 创建 canvas
   let canvas = createCanvas(600, 400);
   canvas.parent("sketch-container");
-}
- 
+
+  noStroke();
+
+  // 计算 drops 尺寸
   let minSleep = Math.min(...sleepHours.map(s => sqrt(s)));
   let maxSleep = Math.max(...sleepHours.map(s => sqrt(s)));
 
   for (let i = 0; i < sleepHours.length; i++) {
-    let adjusted = sqrt(sleepHours[i]); 
-    let size = map(adjusted, minSleep, maxSleep, 20, 40); 
+    let adjusted = sqrt(sleepHours[i]);
+    let size = map(adjusted, minSleep, maxSleep, 20, 40);
     drops.push({
       x: i * 60 + 80,
       y: random(-200, 0),
