@@ -1,8 +1,25 @@
+const R = 150;
+const xh = angle => R / 15.0 * 16 * Math.pow(Math.sin(angle), 3);
+const yh = p => R / 15.0 * (
+-13 * Math.cos(p) +
+5 * Math.cos(2 * p) +
+2 * Math.cos(3 * p) +
+Math.cos(4 * p)
+);
+
+
 function setup() {
+
+  // create the canvas
+
   canvas = createCanvas(600, 600);
+
+  // attach the canvas to the div in your HTML
+
+  canvas.parent("sketch-container");
+
   rectMode(CENTER);
   angleMode(DEGREES);
-  canvas.parent("sketch-container");
 }
 
 function draw() {
