@@ -7,16 +7,6 @@ const yh = p => R / 15.0 * (
 Math.cos(4 * p)
 );
 
-let faceWidth, faceHeight, eyeSize, mouthWidth, mouthHeight;
-let r, g, b;
-
-function setup() {
-  let canvas = createCanvas(600, 600);
-  canvas.parent("sketch-container");
-  
-  noStroke();
-}
-  
   let points = [
   [260, 100],
   [315, 100],
@@ -38,6 +28,14 @@ let newShape = [
 let stars = [];
 let numStars = 300;
 let angleOffset = 0;
+
+function setup() {
+  let canvas = createCanvas(600, 600);
+  canvas.parent("sketch-container");
+  
+  noStroke();
+}
+  
 
   // 初始化星星
   for (let i = 0; i < numStars; i++) {
