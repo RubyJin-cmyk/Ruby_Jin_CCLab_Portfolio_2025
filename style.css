@@ -56,7 +56,7 @@ p {
   line-height: 1.5;
 }
 
-/* Project iframe — 保留，不影响 p5 */
+/* Project iframe */
 iframe {
   width: 100%;           /* fills the content width */
   max-width: 800px;      /* don’t get too huge on big screens */
@@ -65,23 +65,9 @@ iframe {
   border-radius: 4px;
 }
 
-/* ---------------------------- */
-/* 🚫 防止 p5.js canvas 被拉伸 */
-/* ---------------------------- */
-#sketch-container canvas {
-  width: auto !important;
-  height: auto !important;
-  max-width: none !important;
-  max-height: none !important;
-  display: block;
-}
-
 /* Optional: keep content off the very edges on mobile */
 @media (max-width: 600px) {
   body {
     padding: 20px;
-  }
-}
-
   }
 }
