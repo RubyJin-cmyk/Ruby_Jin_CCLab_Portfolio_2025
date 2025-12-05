@@ -31,7 +31,7 @@ let angleOffset = 0;
 
 function setup() {
   // create the canvas
-  let canvas = createCanvas(400, 400);
+  let canvas = createCanvas(600, 600);
 
   // attach the canvas to the div in your HTML
   canvas.parent("sketch-container");
