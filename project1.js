@@ -1,10 +1,8 @@
 function setup() {
   canvas = createCanvas(600, 600);
-  canvas.parent("sketch-container");
-}
-
   rectMode(CENTER);
   angleMode(DEGREES);
+  canvas.parent("sketch-container");
 }
 
 function draw() {
