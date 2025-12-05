@@ -11,6 +11,7 @@ function setup() {
 
 function draw() {
   background(102, 102, 255);
+  scale(0.5);
   
   push();
   translate(300,300)
