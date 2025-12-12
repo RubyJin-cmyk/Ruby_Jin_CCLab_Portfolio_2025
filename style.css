@@ -6,9 +6,9 @@
 body {
   margin: 0;
   padding: 40px;
-  font-family: "Courier New", "Lucida Console", monospace; /* typewriter vibe */
-  background-color: #f4ecff; /* light purple */
-  color: #111;
+  font-family: 'Comic Sans MS', 'Cursive', sans-serif; /* 更甜美的手写风格 */
+  background: linear-gradient(135deg, #fff0f5, #fce4ec); /* 淡紫到粉色渐变 */
+  color: #333;
 }
 
 /* Page layout */
@@ -24,48 +24,62 @@ nav ul {
   margin: 0 0 20px 0;
   display: flex;
   gap: 16px;
+  justify-content: center;
 }
 
 nav a {
   text-decoration: none;
-  color: #333;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
+  color: #ff6f91;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-  border-bottom-color: #a98fd3; /* purple accent */
+  background-color: #ffdce0;
+  color: #ff2f7a;
 }
 
 /* Headings */
 h1 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
-  color: #111;
+  color: #ff6f91;
+  text-align: center;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-top: 30px;
-  margin-bottom: 8px;
-  color: #333;
+  margin-bottom: 12px;
+  color: #ff4f81;
+  text-align: center;
 }
 
 /* Paragraphs */
 p {
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align: center;
+  color: #555;
 }
 
-/* Project iframe */
+/* Project iframe cards */
 iframe {
-  width: 100%;           /* fills the content width */
-  max-width: 800px;      /* don’t get too huge on big screens */
-  height: 500px;         /* taller so more of the sketch shows */
-  border: 2px solid #333;
-  border-radius: 4px;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  border: 2px solid #ff6f91;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(255,111,145,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Optional: keep content off the very edges on mobile */
+iframe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255,111,145,0.5);
+}
+
+/* Responsive padding */
 @media (max-width: 600px) {
   body {
     padding: 20px;
