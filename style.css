@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 40px;
-  font-family: 'Comic Sans MS', 'Cursive', sans-serif; /* 更甜美的手写风格 */
+  font-family: "Courier New", "Lucida Console", monospace; /* 保留 typewriter vibe */
   background: linear-gradient(135deg, #fff0f5, #fce4ec); /* 淡紫到粉色渐变 */
   color: #333;
 }
@@ -24,7 +24,6 @@ nav ul {
   margin: 0 0 20px 0;
   display: flex;
   gap: 16px;
-  justify-content: center;
 }
 
 nav a {
@@ -45,7 +44,7 @@ h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
   color: #ff6f91;
-  text-align: center;
+  text-align: left; /* 改为靠左 */
 }
 
 h2 {
@@ -53,13 +52,13 @@ h2 {
   margin-top: 30px;
   margin-bottom: 12px;
   color: #ff4f81;
-  text-align: center;
+  text-align: left; /* 改为靠左 */
 }
 
 /* Paragraphs */
 p {
   line-height: 1.6;
-  text-align: center;
+  text-align: left; /* 改为靠左 */
   color: #555;
 }
 
