@@ -84,3 +84,34 @@ iframe:hover {
     padding: 20px;
   }
 }
+.intro {
+  margin-bottom: 40px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.project-card h2 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.project-preview {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.project-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+}
