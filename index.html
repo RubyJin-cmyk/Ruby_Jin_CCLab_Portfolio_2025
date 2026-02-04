@@ -1,95 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ruby's CCLab Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <title>Ruby Jin — Portfolio</title>
+  <meta name="description" content="Portfolio of Ruby Jin featuring digital artworks and creative coding projects.">
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+  <link rel="stylesheet" href="css/global.css">
 </head>
 
 <body>
 
-  <header class="site-header">
-    <h1 class="title">Ruby's CCLab Portfolio ♡</h1>
+  <header>
+    <div class="header-inner">
+      <div class="title-block">
+        <h1>Ruby Jin</h1>
+        <h2>Digital Art & Creative Coding</h2>
+      </div>
 
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="extra.html">Extra</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">CC Lab</a>
+        <a href="p5.html">Advanced CC Lab</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="content">
+  <div class="theme-button-container">
+    <button id="dark-toggle" class="theme-button">Toggle Dark Mode</button>
+  </div>
 
-    <section class="intro">
+  <main class="main-grid">
+
+    <!-- 左：介绍 / 宣言 -->
+    <article class="intro-text">
+      <h2>Welcome</h2>
       <p>
-        This is a selection of projects from my first semester as a sophomore.
-        Beginning with no prior experience in coding, I explored interaction, visuals, and visual experimentation through code.
+        This website presents a collection of my digital artworks and creative coding projects.
+        Each piece is an independent exploration of mood, interaction, and visual language.
+      </p>
+
+      <h3>A Message from Future Me</h3>
+      <p>
+        Over the years, I’ve learned that creation often comes with uncertainty and discomfort.
+        I continue making work not because it is easy, but because it gives meaning to experience.
+      </p>
+
+      <h3>What You’ll Find Here</h3>
+      <ul class="flex-list">
+        <li>Standalone digital artworks</li>
+        <li>Concept-based illustrations</li>
+        <li>Experimental projects made with code</li>
+      </ul>
+    </article>
+
+    <!-- 右：视觉作品 -->
+    <section class="featured-work">
+      <h3>Featured Works</h3>
+      <div class="flex-list images-row">
+        <img src="images/Noa.png" alt="Artwork Noa">
+        <img src="images/untitled1.jpg" alt="Untitled artwork">
+      </div>
+    </section>
+
+    <!-- 下：CCLab 介绍 -->
+    <section class="cclab-intro">
+      <p>
+        Below is a selection of projects from my first semester in CC Lab.
+        Starting with no prior coding experience, these works explore interaction,
+        narrative, and visual experimentation through p5.js.
       </p>
     </section>
 
+    <!-- 下：CCLab 项目 Grid -->
     <section class="project-list">
-
       <article class="project-card">
         <h2>Project 1</h2>
-        <p class="project-preview">
-          This project translates a written description by my partner into a p5.js sketch.
-        </p>
-        <a class="project-link" href="project1.html">View project →</a>
+        <p>A p5.js sketch translating a written description into visuals.</p>
+        <a href="project1.html">View project →</a>
       </article>
 
       <article class="project-card">
         <h2>Project 2</h2>
-        <p class="project-preview">
-          An interactive face that changes expression with mouse movement.
-        </p>
-        <a class="project-link" href="project2.html">View project →</a>
+        <p>An interactive face responding to mouse movement.</p>
+        <a href="project2.html">View project →</a>
       </article>
 
       <article class="project-card">
         <h2>Project 3</h2>
-        <p class="project-preview">
-          An interactive taco clock where the sauce flows through the shell.
-        </p>
-        <a class="project-link" href="project3.html">View project →</a>
+        <p>An interactive taco clock with flowing sauce.</p>
+        <a href="project3.html">View project →</a>
       </article>
 
       <article class="project-card">
         <h2>Project 4</h2>
-        <p class="project-preview">
-          An assembled character created from body parts contributed by my partners.
-        </p>
-        <a class="project-link" href="project4.html">View project →</a>
+        <p>A collaboratively assembled character.</p>
+        <a href="project4.html">View project →</a>
       </article>
 
       <article class="project-card">
         <h2>Project 5</h2>
-        <p class="project-preview">
-          A piece inspired by 3D star-glasses.
-        </p>
-        <a class="project-link" href="project5.html">View project →</a>
+        <p>A visual experiment inspired by 3D star glasses.</p>
+        <a href="project5.html">View project →</a>
       </article>
 
       <article class="project-card">
         <h2>Project 6</h2>
-        <p class="project-preview">
-          An emotional data portrait visualizing my sleep patterns as raindrops and waves.
-        </p>
-        <a class="project-link" href="project6.html">View project →</a>
+        <p>An emotional data portrait visualizing sleep patterns.</p>
+        <a href="project6.html">View project →</a>
       </article>
 
       <article class="project-card">
         <h2>Project 7</h2>
-        <p class="project-preview">
-          a narrative-driven autobiographical game exploring the tension between self-perception and mental health.
-        </p>
-        <a class="project-link" href="project7.html">View project →</a>
+        <p>A narrative-driven autobiographical game.</p>
+        <a href="project7.html">View project →</a>
       </article>
-
     </section>
 
   </main>
+
+  <footer>
+    <p>&copy; 2025 Ruby Jin</p>
+    <p>
+      <a href="https://www.instagram.com" target="_blank">Instagram</a> ·
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+  <script>
+    const darkToggleBtn = document.getElementById("dark-toggle");
+
+    if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark");
+    }
+
+    darkToggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      if (document.body.classList.contains("dark")) {
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        localStorage.setItem("darkMode", "disabled");
+      }
+    });
+  </script>
 
 </body>
 </html>
