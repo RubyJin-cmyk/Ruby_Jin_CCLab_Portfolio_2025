@@ -2,129 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Ruby Jin — Portfolio</title>
-  <meta name="description" content="Portfolio of Ruby Jin featuring digital artworks and creative coding projects.">
+  <title>Ruby Jin — Digital Art Portfolio</title>
+  <meta name="description" content="Digital art portfolio of Ruby Jin featuring standalone digital artworks and CCLab projects.">
   <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
-  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
 </head>
-
 <body>
-
-  <header>
-    <div class="header-inner">
-      <div class="title-block">
-        <h1>Ruby Jin</h1>
-        <h2>Digital Art & Creative Coding</h2>
-      </div>
-
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">CC Lab</a>
-        <a href="p5.html">Advanced CC Lab</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
+  <header class="site-header">
+    <h1 class="title">Ruby Jin</h1>
+    <h2>Digital Art & Interactive Projects</h2>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="artworks.html">Artworks</a></li>
+        <li><a href="cclab.html">CCLab Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div class="theme-button-container">
     <button id="dark-toggle" class="theme-button">Toggle Dark Mode</button>
   </div>
 
-  <main class="main-grid">
-
-    <!-- 左：介绍 / 宣言 -->
-    <article class="intro-text">
-      <h2>Welcome</h2>
-      <p>
-        This website presents a collection of my digital artworks and creative coding projects.
-        Each piece is an independent exploration of mood, interaction, and visual language.
-      </p>
-
-      <h3>A Message from Future Me</h3>
-      <p>
-        Over the years, I’ve learned that creation often comes with uncertainty and discomfort.
-        I continue making work not because it is easy, but because it gives meaning to experience.
-      </p>
-
-      <h3>What You’ll Find Here</h3>
-      <ul class="flex-list">
-        <li>Standalone digital artworks</li>
-        <li>Concept-based illustrations</li>
-        <li>Experimental projects made with code</li>
-      </ul>
-    </article>
-
-    <!-- 右：视觉作品 -->
+  <main>
+    <!-- Artworks Preview -->
     <section class="featured-work">
-      <h3>Featured Works</h3>
-      <div class="flex-list images-row">
-        <img src="images/Noa.png" alt="Artwork Noa">
-        <img src="images/untitled1.jpg" alt="Untitled artwork">
+      <h3>Featured Artworks</h3>
+      <div class="images-row">
+        <img src="images/Noa.png" alt="Artwork preview 1">
+        <img src="images/untitled1.jpg" alt="Artwork preview 2">
       </div>
     </section>
 
-    <!-- 下：CCLab 介绍 -->
-    <section class="cclab-intro">
+    <hr>
+
+    <!-- CCLab Preview -->
+    <section class="cclab-preview">
+      <h3>CCLab Projects</h3>
       <p>
-        Below is a selection of projects from my first semester in CC Lab.
-        Starting with no prior coding experience, these works explore interaction,
-        narrative, and visual experimentation through p5.js.
+        Explore my coding-based projects from the first semester: interactive visuals, experiments with p5.js, and creative exploration of interaction.
       </p>
+      <a class="enter-link" href="cclab.html">Enter CCLab Projects →</a>
     </section>
-
-    <!-- 下：CCLab 项目 Grid -->
-    <section class="project-list">
-      <article class="project-card">
-        <h2>Project 1</h2>
-        <p>A p5.js sketch translating a written description into visuals.</p>
-        <a href="project1.html">View project →</a>
-      </article>
-
-      <article class="project-card">
-        <h2>Project 2</h2>
-        <p>An interactive face responding to mouse movement.</p>
-        <a href="project2.html">View project →</a>
-      </article>
-
-      <article class="project-card">
-        <h2>Project 3</h2>
-        <p>An interactive taco clock with flowing sauce.</p>
-        <a href="project3.html">View project →</a>
-      </article>
-
-      <article class="project-card">
-        <h2>Project 4</h2>
-        <p>A collaboratively assembled character.</p>
-        <a href="project4.html">View project →</a>
-      </article>
-
-      <article class="project-card">
-        <h2>Project 5</h2>
-        <p>A visual experiment inspired by 3D star glasses.</p>
-        <a href="project5.html">View project →</a>
-      </article>
-
-      <article class="project-card">
-        <h2>Project 6</h2>
-        <p>An emotional data portrait visualizing sleep patterns.</p>
-        <a href="project6.html">View project →</a>
-      </article>
-
-      <article class="project-card">
-        <h2>Project 7</h2>
-        <p>A narrative-driven autobiographical game.</p>
-        <a href="project7.html">View project →</a>
-      </article>
-    </section>
-
   </main>
 
   <footer>
-    <p>&copy; 2025 Ruby Jin</p>
-    <p>
-      <a href="https://www.instagram.com" target="_blank">Instagram</a> ·
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-    </p>
+    <p>&copy; 2025 Ruby Jin (Renayu Jin). All rights reserved.</p>
+    <p>Email: <a href="mailto:rcom">renaycom</a></p>
   </footer>
 
   <script>
@@ -143,6 +68,5 @@
       }
     });
   </script>
-
 </body>
 </html>
